@@ -10,19 +10,16 @@ public class DAO {
 
 	public Connection Conectabd() {
 		
-		//toda conexão tem que estar dentro de um try catch
 		try {
 			Connection con = DriverManager.getConnection(
-					//aqui vai a url obs caminho apos o nome do banco apos o usuario e apos a senha
 					"jdbc:postgresql://localhost:5432/crude","postgres","0508"
 					);
 			System.out.println("conectado");
-			//retornando a conexao
 			return con;
 
 		}
 		catch(Exception e) {
-			//caso der erro de conexao irar parar a conexao e não vai mostra esse printf
+			
 			e.printStackTrace();
 			System.out.println("erro de conexão");
 
